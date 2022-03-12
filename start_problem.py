@@ -172,7 +172,7 @@ if __name__ == '__main__':
     logger.error('ディレクトリを作る。')
     script_dir = Path(__file__).parent.resolve()
     problem_dir = script_dir / 'submit' / metadata.problem_id
-    problem_dir.mkdir(exist_ok=True)
+    problem_dir.mkdir(parents=True, exist_ok=True)
 
     logger.error('ファイルを作る。')
     metadata_file = problem_dir / 'metadata.json'
